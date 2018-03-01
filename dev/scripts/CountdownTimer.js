@@ -2,10 +2,10 @@ import React from 'react';
 import moment from 'moment';
 import CountdownTimer from 'react-awesome-countdowntimer';
 
-const SimpleComponent = () => {
+const SimpleComponent = (props) => {
     return(
         <div className="timer">
-            <CountdownTimer endDate={moment('2018-03-29T00:00:00-08:00') } />
+            <CountdownTimer endDate={moment(`${[props.data[0].launch_date_utc]}`) } />
         </div>
     );
 }
