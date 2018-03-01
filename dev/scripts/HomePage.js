@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import SimpleComponent from './CountdownTimer';
 
 class HomePage extends React.Component {
     constructor () {
@@ -26,6 +27,8 @@ class HomePage extends React.Component {
         })
     }
 
+
+
     render() {
         return(
            <div> 
@@ -42,6 +45,9 @@ class HomePage extends React.Component {
                     </select>
                     <input type="submit" name="" id=""/>
                 </form>
+                <div>
+                    <SimpleComponent/>
+                </div>
                 {this.state.rocketInfo.map((item) => {
                     return (
                         <div key={item.flight_number}>
@@ -51,7 +57,6 @@ class HomePage extends React.Component {
                             <p>{item.launch_date_unix}</p>
                             <p>{item.launch_site.site_name_long}</p>
                         </div>
-
                     )    
                 })}
             </div>
