@@ -14,7 +14,7 @@ class LandingPage extends React.Component {
     return (
       <div>
         <h2>Working</h2>
-        <Link to="/Home">Start</Link>
+        <Link to="/home">Start</Link>
       </div>
     )
   }
@@ -26,9 +26,9 @@ class App extends React.Component {
         <Router>
           <div>
             <Route path="/" exact component={LandingPage}/>
-            <Route path="/Home" exact component={HomePage} />
-            <Route path="/LaunchDetails" exact component={LaunchDetails} />
-            <Route path="/MultiLaunchMap" exact component={MultiLaunchMap} />
+            <Route path="/home" exact component={HomePage} />
+            <Route path="/launchDetails/:flight_number/" exact component={LaunchDetails} />
+            <Route path="/multiLaunchMap" exact component={MultiLaunchMap} />
           </div>
         </Router>
       )

@@ -7,58 +7,66 @@ class HomePage extends React.Component {
     constructor () {
         super();
         this.state = {
-            rocketInfo: [],
+            upcomingRocketInfo: [],
+            pastRocketInfo: [],
         }
     }
 
     componentDidMount() {
-        axios.get(`https://api.spacexdata.com/v2/launches/upcoming`,{
-            params: {
-            }
-        }).then(({data}) => {
-            console.log(data)
+        axios.get(`https://api.spacexdata.com/v2/launches/upcoming`)
+            .then(({data}) => {
             const upcomingLaunchData = data.pop();
-            console.log(upcomingLaunchData);
             const rocketData = [];
             rocketData.push(upcomingLaunchData);
             this.setState({
-                rocketInfo: rocketData
+                upcomingRocketInfo: rocketData,
             })
         })
+
+        axios.get(`https://api.spacexdata.com/v2/launches/`)
+        .then(({data}) => {
+            const pastRocketData = data;
+            this.setState({
+                pastRocketInfo: pastRocketData,
+            })
+        }) 
     }
-
-
 
     render() {
         return(
            <div> 
-                <Link to="/Home">Home</Link>
-                <Link to="/LaunchDetails">Launch Details</Link>
-                <Link to="/MultiLaunchMap">Launches Map</Link>
+                <Link to="/home">Home</Link>
+                <Link to="/multiLaunchMap">Launches Map</Link>
                 <h2>HomePage</h2>
                 <form action="">
                     <label htmlFor="launchSelect">Select a Launch</label>
                     <select name="launchSelect" id="">
-                        <option value="">Toronto</option>
-                        <option value="">New York</option>
-                        <option value="">Califonia</option>
+                        {this.state.pastRocketInfo.map((item) => {
+                            return (
+                                <option value="" key={item.flight_number}> Flight: {item.flight_number},{item.launch_site.site_name_long}</option>
+                            )
+                        })}
                     </select>
                     <input type="submit" name="" id=""/>
                 </form>
-                <div>
-                    <SimpleComponent/>
+                <div className="upcomingLaunch">
+                    <div>
+                        {this.state.upcomingRocketInfo[0] !== undefined 
+                        ? <SimpleComponent data={this.state.upcomingRocketInfo} /> 
+                        : null}
+                    </div>
+                    {this.state.upcomingRocketInfo.map((item) => {
+                        return (
+                            <div key={item.flight_number}>
+                                <h2>Next Launch</h2>
+                                <p>Rocket Type: {item.rocket.rocket_name}</p>
+                                <p>Flight Number: {item.flight_number}</p>
+                                <p>Launch Site:{item.launch_site.site_name_long}</p>
+                                {/* <Link to={`/launchDetails/${item.flight_number}`}>Details</Link> */}
+                            </div>
+                        )    
+                    })}
                 </div>
-                {this.state.rocketInfo.map((item) => {
-                    return (
-                        <div key={item.flight_number}>
-                            <h2>{item.details}</h2>
-                            <p>{item.rocket.rocket_name}</p>
-                            <p>{item.flight_number}</p>
-                            <p>{item.launch_date_unix}</p>
-                            <p>{item.launch_site.site_name_long}</p>
-                        </div>
-                    )    
-                })}
             </div>
         )
     }
