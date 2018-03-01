@@ -9,7 +9,24 @@ class HomePage extends React.Component {
         this.state = {
             upcomingRocketInfo: [],
             pastRocketInfo: [],
+            value: ""
         }
+
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+    }
+
+    handleChange(e) {
+        this.setState({
+            value: e.target.value
+        });
+    }
+    
+
+    handleSubmit(e) {
+        e.preventDefault();
+        console.log(this.state.value);
+       
     }
 
     componentDidMount() {
@@ -32,22 +49,25 @@ class HomePage extends React.Component {
         }) 
     }
 
+   
+
     render() {
         return(
            <div> 
                 <Link to="/home">Home</Link>
                 <Link to="/multiLaunchMap">Launches Map</Link>
                 <h2>HomePage</h2>
-                <form action="">
+                <form action="" onSubmit={this.handleSubmit}>
                     <label htmlFor="launchSelect">Select a Launch</label>
-                    <select name="launchSelect" id="">
+                    <select name="launchSelect" id="" value={this.state.value} onChange={this.handleChange}>
                         {this.state.pastRocketInfo.map((item) => {
                             return (
-                                <option value="" key={item.flight_number}> Flight: {item.flight_number},{item.launch_site.site_name_long}</option>
+                                <option value={item.flight_number} key={item.flight_number}> Flight: {item.flight_number},{item.launch_site.site_name_long}</option>
                             )
                         })}
                     </select>
-                    <input type="submit" name="" id=""/>
+                   
+                    <Link data={this.state.value} to={`/launchDetails/${this.state.value}`}> <input type="submit" value="Submit" /></Link>
                 </form>
                 <div className="upcomingLaunch">
                     <div>
