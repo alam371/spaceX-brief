@@ -9,7 +9,7 @@ class HomePage extends React.Component {
         this.state = {
             upcomingRocketInfo: [],
             pastRocketInfo: [],
-            value: ""
+            value: "1"
         }
 
         this.handleChange = this.handleChange.bind(this);
