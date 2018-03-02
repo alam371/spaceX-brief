@@ -32,10 +32,11 @@ class LaunchDetails extends React.Component {
                 {this.state.missionInfo.map((item) => {
                     return(
                         <div key={item.flight_number}>
-                            <p>Article Link: {item.links.article_link}</p>
+                            <p>Article Link: <a href={item.links.article_link}>link</a></p>
                             <p>Video Link: {item.links.video_link}</p>
-                            <p>Reddit: </p>
-                            <p>Mission Patch: {item.links.mission_patch}</p>
+                            <p>Reddit: <a href={item.links.reddit_launch} target="_blank">link</a></p>
+                            <div className="patch"><img src={item.links.mission_patch}/></div>
+                            {console.log(item.links.reddit_launch)}
                         </div>
                     )
                 })}
