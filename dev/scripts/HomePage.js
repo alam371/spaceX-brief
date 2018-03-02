@@ -62,7 +62,7 @@ class HomePage extends React.Component {
                     <select name="launchSelect" id="" value={this.state.value} onChange={this.handleChange}>
                         {this.state.pastRocketInfo.map((item) => {
                             return (
-                                <option value={item.flight_number} key={item.flight_number}> Flight: {item.flight_number},{item.launch_site.site_name_long}</option>
+                                <option value={item.flight_number} key={item.flight_number}> Flight: {item.flight_number}, {item.launch_site.site_name}</option>
                             )
                         })}
                     </select>
