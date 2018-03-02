@@ -12,6 +12,10 @@ class MultiLaunchMap extends React.Component {
             endDate: '',
             // Make sure to come back and set initial state for Start and End date to a number!
         }
+
+        this.getStartDate = this.getStartDate.bind(this);
+        this.getEndDate = this.getEndDate.bind(this);
+
     }
 
     componentDidMount() {
@@ -33,13 +37,13 @@ class MultiLaunchMap extends React.Component {
 
     getStartDate(e) {
         this.setState({
-            startDate: e.target.startDate
+            startDate: e.target.value
         })
     }
 
-    getEndDate() {
+    getEndDate(e) {
         this.setState({
-            endDate: e.target.endDate
+            endDate: e.target.value
         })
     }
 
@@ -50,7 +54,7 @@ class MultiLaunchMap extends React.Component {
                 <h2>MultiLaunchMap</h2>
                 <form action="" onSubmit={this.formSubmit}>
                     <label htmlFor="startDate">Start Date:</label>
-                    <select name="startDate" id="" onChange={this.getStartDate} value={this.state.dateStart}>
+                    <select name="startDate" id="" onChange={this.getStartDate} value={this.state.startDate}>
                         {this.state.mapInfo.map((item) => {
                             return (
                                 <option value={item.flight_number} key={item.flight_number}>{item.flight_number} {moment(`${item.launch_date_utc}`).format('LL')}</option>
@@ -58,7 +62,7 @@ class MultiLaunchMap extends React.Component {
                         })}
                     </select>
                     <label htmlFor="endDate">End Date:</label>
-                    <select name="endDate" id="" onChange={this.getEndDate} value={this.state.dateEnd}>
+                    <select name="endDate" id="" onChange={this.getEndDate} value={this.state.endDate}>
                         {this.state.mapInfo.map((item) => {
                             return (
                                 <option value={item.flight_number} key={item.flight_number}>{moment(`${item.launch_date_utc}`).format('LL')}</option>
