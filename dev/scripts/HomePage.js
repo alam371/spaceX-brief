@@ -82,7 +82,6 @@ class HomePage extends React.Component {
                                 <p>Rocket Type: {item.rocket.rocket_name}</p>
                                 <p>Flight Number: {item.flight_number}</p>
                                 <p>Launch Site:{item.launch_site.site_name_long}</p>
-                                {/* <Link to={`/launchDetails/${item.flight_number}`}>Details</Link> */}
                             </div>
                         )    
                     })}
