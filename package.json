@@ -32,8 +32,10 @@
     "vinyl-source-stream": "^1.1.0"
   },
   "dependencies": {
+    "google-maps-react": "^1.1.2",
     "moment": "^2.20.1",
     "node-sass": "^4.7.1",
-    "react-awesome-countdowntimer": "^1.1.1"
+    "react-awesome-countdowntimer": "^1.1.1",
+    "react-google-maps": "^9.4.5"
   }
 }
