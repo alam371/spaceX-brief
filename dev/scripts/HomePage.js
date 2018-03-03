@@ -56,7 +56,7 @@ class HomePage extends React.Component {
            <div> 
                 <Link to="/home">Home</Link>
                 <Link to="/multiLaunchMap">Launches Map</Link>
-                <h2>HomePage</h2>
+                <h2>Home Page</h2>
                 <form action="" onSubmit={this.handleSubmit}>
                     <label htmlFor="launchSelect">Select a Launch</label>
                     <select name="launchSelect" id="" value={this.state.value} onChange={this.handleChange}>
@@ -79,7 +79,7 @@ class HomePage extends React.Component {
                         return (
                             <div key={item.flight_number}>
                                 <h2>Next Launch</h2>
-                                <p>Rocket Type: {item.rocket.rocket_name}</p>
+                                <p className="homepage__text">Rocket Type: {item.rocket.rocket_name}</p>
                                 <p>Flight Number: {item.flight_number}</p>
                                 <p>Launch Site:{item.launch_site.site_name_long}</p>
                             </div>
