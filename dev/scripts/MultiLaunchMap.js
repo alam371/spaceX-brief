@@ -15,7 +15,7 @@ class MultiLaunchMap extends React.Component {
 
         this.getStartDate = this.getStartDate.bind(this);
         this.getEndDate = this.getEndDate.bind(this);
-
+        
     }
 
     componentDidMount() {
@@ -70,8 +70,8 @@ class MultiLaunchMap extends React.Component {
                         })}
                     </select>
                     <input type="submit" value="Submit" />
+    
                 </form>
-
 
             </div>
         )
