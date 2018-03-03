@@ -10,9 +10,9 @@ class MultiLaunchMap extends React.Component {
             mapInfo: [],
             startDate: '',
             endDate: '',
+            userSelectMap: [],
             // Make sure to come back and set initial state for Start and End date to a number!
         }
-
         this.getStartDate = this.getStartDate.bind(this);
         this.getEndDate = this.getEndDate.bind(this);
         
@@ -32,7 +32,12 @@ class MultiLaunchMap extends React.Component {
     formSubmit(e) {
         e.preventDefault();
         console.log('hello');
-
+        this.initMap();
+        this.state.startDate > this.state.endDate ? alert('Incorrect submission of date. Please check your selection again. ') : null;   
+        const slicedMapInfo = this.state.mapInfo.slice(this.state.startDate,this.state.endDate);
+        this.setState({
+            userSelectMap: slicedMapInfo
+        })
     }
 
     getStartDate(e) {
@@ -48,6 +53,7 @@ class MultiLaunchMap extends React.Component {
     }
 
     render() {
+        console.log(this.state.userSelectMap);
         return (
             <div>
                 <Link to="/home">Home</Link>
@@ -57,7 +63,7 @@ class MultiLaunchMap extends React.Component {
                     <select name="startDate" id="" onChange={this.getStartDate} value={this.state.startDate}>
                         {this.state.mapInfo.map((item) => {
                             return (
-                                <option value={item.flight_number} key={item.flight_number}>{item.flight_number} {moment(`${item.launch_date_utc}`).format('LL')}</option>
+                                <option value={item.flight_number} key={item.flight_number}>Flight: {item.flight_number}, {moment(`${item.launch_date_utc}`).format('LL')}</option>
                             )
                         })}
                     </select>
@@ -65,14 +71,13 @@ class MultiLaunchMap extends React.Component {
                     <select name="endDate" id="" onChange={this.getEndDate} value={this.state.endDate}>
                         {this.state.mapInfo.map((item) => {
                             return (
-                                <option value={item.flight_number} key={item.flight_number}>{moment(`${item.launch_date_utc}`).format('LL')}</option>
+                                <option value={item.flight_number} key={item.flight_number}>Flight: {item.flight_number}, {moment(`${item.launch_date_utc}`).format('LL')}</option>
                             )
                         })}
                     </select>
                     <input type="submit" value="Submit" />
     
                 </form>
-
             </div>
         )
     }
