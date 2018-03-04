@@ -36,31 +36,14 @@ body{
 .wrapper{
     max-width: 1080px;
     width: 90%;
+    margin: 0 auto;
 }
 
 
 h2{
     font-family: $headerfont;
-    @include remCalc(50)
 }
 
 img{
     width: 100%;
-}
-
-.patch{
-    width: 250px;
-}
-
-.timer {
-    width: 500px;
-}
-
-div[style] {
-    background: green;
-}
-
-.timer .section div[style] {
-    background-color: red;
-    font-size: 12px;
 }

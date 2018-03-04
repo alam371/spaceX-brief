@@ -134,6 +134,43 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 h2 {
   color: red; }
 
+.launch_details__container {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url(../assets/jason-blackeye-213258-unsplash.jpg);
+  background-size: cover;
+  background-position: center; }
+  .launch_details__container h2 {
+    font-family: "Arial", sans-serif;
+    font-size: 50px;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase; }
+  .launch_details__container .launch_details__box {
+    width: 100%;
+    background: #1e2529; }
+    .launch_details__container .launch_details__box .patch {
+      width: 250px;
+      float: left;
+      width: 50%;
+      padding: 15px 20px; }
+    .launch_details__container .launch_details__box .flight-details-text {
+      float: left;
+      width: 50%;
+      padding: 15px 30px; }
+      .launch_details__container .launch_details__box .flight-details-text p {
+        font-family: "Roboto", sans-serif;
+        font-size: 16px;
+        color: #fff; }
+  .launch_details__container iframe {
+    width: 100%;
+    height: 480px;
+    margin-top: 100px; }
+  .launch_details__container .flight-details-links p {
+    font-family: "Roboto", sans-serif;
+    font-size: 35px;
+    text-align: center;
+    color: #fff;
+    margin-top: 60px; }
+
 body {
   margin: 0;
   padding: 0;
@@ -142,24 +179,11 @@ body {
 
 .wrapper {
   max-width: 1080px;
-  width: 90%; }
+  width: 90%;
+  margin: 0 auto; }
 
 h2 {
-  font-family: "Arial", sans-serif;
-  font-size: 3.125rem; }
+  font-family: "Arial", sans-serif; }
 
 img {
   width: 100%; }
-
-.patch {
-  width: 250px; }
-
-.timer {
-  width: 500px; }
-
-div[style] {
-  background: green; }
-
-.timer .section div[style] {
-  background-color: red;
-  font-size: 12px; }
