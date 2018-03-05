@@ -5,7 +5,6 @@ $secondcolor:  #86a5c7;
 // highlights and hover states on text
 $thirdcolor: #eff0a8;
 $fourthcolor: #fff;
-
 $mainfont: 'Roboto', sans-serif;
 $headerfont: 'Arial', sans-serif;
 
@@ -26,9 +25,13 @@ $headerfont: 'Arial', sans-serif;
 @import "components/launchdetails";
 @import "components/multilaunchmap";
 
-body{
+*{
     margin: 0;
     padding: 0;
+}
+
+body{
+   
     font-family: $mainfont;
     font-size: 100%;
 }
@@ -36,31 +39,14 @@ body{
 .wrapper{
     max-width: 1080px;
     width: 90%;
+    margin: 0 auto;
 }
 
 
 h2{
     font-family: $headerfont;
-    @include remCalc(50)
 }
 
 img{
     width: 100%;
-}
-
-.patch{
-    width: 250px;
-}
-
-.timer {
-    width: 500px;
-}
-
-div[style] {
-    background: green;
-}
-
-.timer .section div[style] {
-    background-color: red;
-    font-size: 12px;
 }
