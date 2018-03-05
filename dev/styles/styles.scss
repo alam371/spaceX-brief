@@ -13,11 +13,9 @@ $headerfont: 'Arial', sans-serif;
 // Buttons: rectangle, clean, no drop shadows, bordered rectangle, 18px, uppercase text, Roboto
 // Dropdowns: white dropdowns, arrows styling tbd (one arrow instead of double on Firefox), add padding, experiment with borders, upppercase text
 // Big space background image / black site
-
 // Quinn: Landing and Home Page
 // Angeline : Launch Details
 // Joey : MultiLaunchMap
-
 
 @import "components/setup";
 @import "components/homepage";
@@ -31,7 +29,10 @@ $headerfont: 'Arial', sans-serif;
 }
 
 body{
+<<<<<<< HEAD
    
+=======
+>>>>>>> 812af462f10c7b54b648be5208877f85b246550d
     font-family: $mainfont;
     font-size: 100%;
 }
@@ -41,7 +42,6 @@ body{
     width: 90%;
     margin: 0 auto;
 }
-
 
 h2{
     font-family: $headerfont;

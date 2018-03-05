@@ -434,6 +434,120 @@ body {
   border-left-color: #1e2529;
   transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s; }
 
+.launch_details__container {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url(../assets/jason-blackeye-213258-unsplash.jpg);
+  background-size: cover;
+  background-position: center; }
+  .launch_details__container h2 {
+    font-family: "Arial", sans-serif;
+    font-size: 50px;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase; }
+  .launch_details__container .launch_details__box {
+    width: 100%;
+    background: #1e2529; }
+    .launch_details__container .launch_details__box .patch {
+      width: 250px;
+      float: left;
+      width: 50%;
+      padding: 15px 20px; }
+    .launch_details__container .launch_details__box .flight-details-text {
+      float: left;
+      width: 50%;
+      padding: 15px 30px; }
+      .launch_details__container .launch_details__box .flight-details-text p {
+        font-family: "Roboto", sans-serif;
+        font-size: 16px;
+        color: #fff; }
+  .launch_details__container iframe {
+    width: 100%;
+    height: 480px;
+    margin-top: 100px; }
+  .launch_details__container .flight-details-links p {
+    font-family: "Roboto", sans-serif;
+    font-size: 35px;
+    text-align: center;
+    color: #fff;
+    margin-top: 60px; }
+
+.multi-launch-section {
+  padding-top: 75px;
+  padding-bottom: 200px;
+  background-color: black;
+  background-image: url(../assets/multiLaunch-form-bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 25px -75px;
+  color: #fff;
+  text-align: center; }
+
+.multi-launch-section h2 {
+  color: #fff;
+  font-weight: 900;
+  margin-bottom: 30px;
+  letter-spacing: 5px;
+  font-size: 2.5rem; }
+
+.multi-launch-section h3 {
+  margin-bottom: 100px;
+  letter-spacing: 2px; }
+
+.multi-launch-section a {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase; }
+
+.multi-launch-section label {
+  margin-left: 30px;
+  font-size: 1.125rem; }
+
+.multi-launch-section select {
+  margin-left: 25px;
+  padding: 5px 30px;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  border: 1px solid #555;
+  color: white;
+  text-transform: uppercase;
+  transition: all 0.5s;
+  font-size: 1.125rem; }
+
+.multi-launch-section select:hover {
+  color: #eff0a8;
+  background-color: rgba(134, 165, 199, 0.5); }
+
+.multi-launch-section option {
+  background-color: black; }
+
+.multi-launch-section input {
+  display: block;
+  margin: 0 auto;
+  margin-top: 50px;
+  padding: 5px 30px;
+  color: white;
+  background-color: transparent;
+  border: 2px solid transparent;
+  border-left: 2px dashed #555;
+  border-right: 2px dashed #555;
+  transition: all 0.5s;
+  font-size: 1.125rem; }
+
+.multi-launch-section input:hover {
+  color: #86a5c7;
+  border: 2px dashed #555; }
+
+.multi-launch-form {
+  margin: 0 auto;
+  margin-bottom: 250px; }
+
+.multi-launch-generated-map {
+  padding: 250px 0px;
+  background-color: black;
+  color: white;
+  text-align: center; }
+
 * {
   margin: 0;
   padding: 0; }
