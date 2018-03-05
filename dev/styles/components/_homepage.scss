@@ -1,3 +1,306 @@
+// Headers and Titles in Arial
+// All other text is Roboto
+// Buttons: rectangle, clean, no drop shadows, bordered rectangle, 18px, uppercase text, Roboto
+// Dropdowns: white dropdowns, arrows styling tbd (one arrow instead of double on Firefox), add padding, experiment with borders, upppercase text
+// Big space background image / black site
+
+
+body{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+
+}
+
 h2{
-    color: red;
+    color: $fourthcolor;
+    margin-bottom: 40px;
+    .index{
+        font-size: 12px;
+        font-weight: 400;
+        position: relative;
+        bottom: 20px;
+        right: 5px;
+        color: lightgrey;
+        // border: 1px solid white;
+        padding: 5px;
+        // border-radius: 5px 5px;
+    }
+}
+
+// Homepage Hero
+
+.homepage{
+    margin: 0;
+    padding: 0;
+    // height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('../../public/assets/space-hero-image.jpg'); 
+    background-repeat: repeat-y;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+// Panel Styles
+.panel{
+    height: 80vh;
+    background: black;
+    clip-path: inset(10px 20px 30px 40px);
+}
+.parallax{
+    // background: transparent;
+    padding: 60px 0;
+    border: 2px solid white;
+    border-radius: 5px 5px;
+    width: 80%;
+    height: 500px;
+    margin: 20px auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    background-clip: transparent;
+    color: white;
+}
+
+
+
+.spaceX{
+    font-size: 60px;
+}
+
+.tagline{
+    color: $fourthcolor;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6rem;
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: 1px;
+    margin-top: 40px;
+}
+
+.home-header{
+    margin-bottom: 10px;
+    font-size: 40px;
+    // border-bottom: 1px solid white;
+    // border-width: 20%;
+}  
+
+.launch-stats{
+    width: 900px;
+    margin: 40px auto 30px auto;
+    font-weight: 300;
+    letter-spacing: 1px;
+
+}
+
+.launch-stats p{
+    line-height: 1.6rem;
+    text-align: center;
+    width: 33.33%;
+    float: left;
+}
+
+.left{
+    text-align: left;
+}
+
+.right{
+    text-align: right;
+}
+
+.middle{
+    border-left: 1px solid grey;
+    border-right: 1px solid grey;
+    margin: 0 auto;
+}
+
+// Countdown Timer Styles
+.timer{
+    width: 500px;
+    // position: absolute;
+    // top: 10px;
+    // right: 0;
+    margin: 0 auto;
+
+}
+
+.timer div[style]{
+    background: none;
+    // display: block;
+    // height: 60px !important;
+    padding: 20px 20px 40px 20px;
+}
+
+// Countdown Background Plate
+.section[style]{
+    background-color:rgba(211, 211, 211, 1) !important;
+    border-radius: 5px !important;
+    position: relative !important;
+    padding: 0 !important;
+    margin: 0 10px !important;
+}
+
+// Countdown Numbers
+.time[style]{
+    display: block !important;
+    color: black !important;
+    font-size: 40px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    letter-spacing: 0.5px !important;
+    font-family: $mainfont !important;
+    background-color: none !important;
+    position: absolute !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+}
+
+// Label for Numbers
+.label[style]{
+    display: block !important;
+    text-transform: uppercase;
+    font-family: $mainfont !important;
+    font-weight: 300 !important;
+    font-size: 15px !important;
+    text-align: center !important;
+    position: relative !important;
+    top: 90px;
+    background: none !important;
+    color:  lightgrey !important;
+}
+
+.countdown-block{
+    width: 500px;
+    height: 15px;
+    border-radius: 5px 5px;
+    background: rgb(119, 118, 118);
+    position: relative;
+    top: 75px;
+}
+
+.count-up{
+    font-size: 22px;
+    font-weight: 400;
+    text-transform: uppercase;
+
+}
+
+
+// Form Styling
+
+form{
+    border: none;
+    margin-top: 80px;
+    height: 50px;
+}
+
+select{
+    border: 1px solid white;
+    padding: 10px;
+    background: none;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 300;
+}
+
+.submit{
+    text-decoration: none;
+    padding: 10px;
+}
+
+.submit input[type="text"]{
+    text-transform: uppercase;
+}
+
+
+
+// Pin Animation 
+.pin {
+  width: 30px;
+  height: 30px;
+  border-radius: 50% 50% 50% 0;
+  background: $secondcolor;
+  position: absolute;
+  transform: rotate(-45deg);
+  left: 50%;
+  top: 50%;
+  margin: -20px 0 0 -20px;
+}
+.pin:after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  margin: 0 0 0 8px;
+  background: #e6e6e6;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.bounce {
+  animation-name: bounce;
+  animation-fill-mode: both;
+  animation-duration: 1s;
+}
+
+.pulse {
+  background: #d6d4d4;
+  border-radius: 50%;
+  height: 12px;
+  width: 12px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: 20px 0px 0px -12px;
+  transform: rotateX(55deg);
+  z-index: -2;
+}
+.pulse:after {
+  content: "";
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  margin: -8px 0 0 -18px;
+  animation: pulsate 1s ease-out;
+  animation-iteration-count: infinite;
+  opacity: 0;
+  box-shadow: 0 0 1px 2px $secondcolor;
+  animation-delay: 1.1s;
+}
+
+@keyframes pulsate {
+  0% {
+    transform: scale(0.1, 0.1);
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1.2, 1.2);
+    opacity: 0;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    opacity: 0;
+    transform: translateY(-2000px) rotate(-45deg);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translateY(30px) rotate(-45deg);
+  }
+
+  80% {
+    transform: translateY(-10px) rotate(-45deg);
+  }
+
+  100% {
+    transform: translateY(0) rotate(-45deg);
+  }
 }

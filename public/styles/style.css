@@ -131,35 +131,438 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
+body {
+  margin: 0;
+  padding: 0;
+  text-align: center; }
+
 h2 {
-  color: red; }
+  color: #fff;
+  margin-bottom: 40px; }
+  h2 .index {
+    font-size: 12px;
+    font-weight: 400;
+    position: relative;
+    bottom: 20px;
+    right: 5px;
+    color: lightgrey;
+    padding: 5px; }
+
+.homepage {
+  margin: 0;
+  padding: 0;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../../public/assets/space-hero-image.jpg");
+  background-repeat: repeat-y;
+  background-size: cover;
+  background-attachment: fixed; }
+
+.panel {
+  height: 80vh;
+  background: black;
+  clip-path: inset(10px 20px 30px 40px); }
+
+.parallax {
+  padding: 60px 0;
+  border: 2px solid white;
+  border-radius: 5px 5px;
+  width: 80%;
+  height: 500px;
+  margin: 20px auto;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  background-clip: transparent;
+  color: white; }
+
+.spaceX {
+  font-size: 60px; }
+
+.tagline {
+  color: #fff;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6rem;
+  text-transform: uppercase;
+  font-weight: 300;
+  letter-spacing: 1px;
+  margin-top: 40px; }
+
+.home-header {
+  margin-bottom: 10px;
+  font-size: 40px; }
+
+.launch-stats {
+  width: 900px;
+  margin: 40px auto 30px auto;
+  font-weight: 300;
+  letter-spacing: 1px; }
+
+.launch-stats p {
+  line-height: 1.6rem;
+  text-align: center;
+  width: 33.33%;
+  float: left; }
+
+.left {
+  text-align: left; }
+
+.right {
+  text-align: right; }
+
+.middle {
+  border-left: 1px solid grey;
+  border-right: 1px solid grey;
+  margin: 0 auto; }
+
+.timer {
+  width: 500px;
+  margin: 0 auto; }
+
+.timer div[style] {
+  background: none;
+  padding: 20px 20px 40px 20px; }
+
+.section[style] {
+  background-color: lightgray !important;
+  border-radius: 5px !important;
+  position: relative !important;
+  padding: 0 !important;
+  margin: 0 10px !important; }
+
+.time[style] {
+  display: block !important;
+  color: black !important;
+  font-size: 40px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  letter-spacing: 0.5px !important;
+  font-family: "Roboto", sans-serif !important;
+  background-color: none !important;
+  position: absolute !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important; }
+
+.label[style] {
+  display: block !important;
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif !important;
+  font-weight: 300 !important;
+  font-size: 15px !important;
+  text-align: center !important;
+  position: relative !important;
+  top: 90px;
+  background: none !important;
+  color: lightgrey !important; }
+
+.countdown-block {
+  width: 500px;
+  height: 15px;
+  border-radius: 5px 5px;
+  background: #777676;
+  position: relative;
+  top: 75px; }
+
+.count-up {
+  font-size: 22px;
+  font-weight: 400;
+  text-transform: uppercase; }
+
+form {
+  border: none;
+  margin-top: 80px;
+  height: 50px; }
+
+select {
+  border: 1px solid white;
+  padding: 10px;
+  background: none;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 300; }
+
+.submit {
+  text-decoration: none;
+  padding: 10px; }
+
+.submit input[type="text"] {
+  text-transform: uppercase; }
+
+.pin {
+  width: 30px;
+  height: 30px;
+  border-radius: 50% 50% 50% 0;
+  background: #86a5c7;
+  position: absolute;
+  transform: rotate(-45deg);
+  left: 50%;
+  top: 50%;
+  margin: -20px 0 0 -20px; }
+
+.pin:after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  margin: 0 0 0 8px;
+  background: #e6e6e6;
+  position: absolute;
+  border-radius: 50%; }
+
+.bounce {
+  animation-name: bounce;
+  animation-fill-mode: both;
+  animation-duration: 1s; }
+
+.pulse {
+  background: #d6d4d4;
+  border-radius: 50%;
+  height: 12px;
+  width: 12px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: 20px 0px 0px -12px;
+  transform: rotateX(55deg);
+  z-index: -2; }
+
+.pulse:after {
+  content: "";
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  margin: -8px 0 0 -18px;
+  animation: pulsate 1s ease-out;
+  animation-iteration-count: infinite;
+  opacity: 0;
+  box-shadow: 0 0 1px 2px #86a5c7;
+  animation-delay: 1.1s; }
+
+@keyframes pulsate {
+  0% {
+    transform: scale(0.1, 0.1);
+    opacity: 0; }
+  50% {
+    opacity: 1; }
+  100% {
+    transform: scale(1.2, 1.2);
+    opacity: 0; } }
+
+@keyframes bounce {
+  0% {
+    opacity: 0;
+    transform: translateY(-2000px) rotate(-45deg); }
+  60% {
+    opacity: 1;
+    transform: translateY(30px) rotate(-45deg); }
+  80% {
+    transform: translateY(-10px) rotate(-45deg); }
+  100% {
+    transform: translateY(0) rotate(-45deg); } }
 
 body {
   margin: 0;
   padding: 0;
+  height: 100vh;
+  background: black; }
+
+.main-container {
+  margin: 0;
+  padding: 0; }
+
+.landing-page {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../../public/assets/spacex-blastoff.jpg");
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+.landing-page-text {
+  text-align: center;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%); }
+
+.landing-page-text h2 {
+  font-size: 60px;
+  margin-bottom: 80px; }
+
+.app-button {
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 15px 20px;
+  color: #fff;
+  font-weight: 300;
+  letter-spacing: 1px;
+  box-shadow: inset 0 0 0 2px white;
+  position: relative;
+  vertical-align: middle;
+  cursor: pointer; }
+
+.app-button::before, .app-button::after {
+  box-sizing: inherit;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%; }
+
+.draw::before, .draw::after {
+  border: 2px solid transparent;
+  width: 0;
+  height: 0; }
+
+.draw::before {
+  top: 0;
+  left: 0; }
+
+.draw::after {
+  bottom: 0;
+  right: 0; }
+
+.draw:hover::before, .draw:hover::after {
+  width: 100%;
+  height: 100%; }
+
+.draw:hover::before {
+  border-top-color: #1e2529;
+  border-right-color: #1e2529;
+  transition: width 0.25s ease-out, height 0.25s ease-out 0.25s; }
+
+.draw:hover::after {
+  border-bottom-color: #1e2529;
+  border-left-color: #1e2529;
+  transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s; }
+
+.launch_details__container {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url(../assets/jason-blackeye-213258-unsplash.jpg);
+  background-size: cover;
+  background-position: center; }
+  .launch_details__container h2 {
+    font-family: "Arial", sans-serif;
+    font-size: 50px;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase; }
+  .launch_details__container .launch_details__box {
+    width: 100%;
+    background: #1e2529; }
+    .launch_details__container .launch_details__box .patch {
+      width: 250px;
+      float: left;
+      width: 50%;
+      padding: 15px 20px; }
+    .launch_details__container .launch_details__box .flight-details-text {
+      float: left;
+      width: 50%;
+      padding: 15px 30px; }
+      .launch_details__container .launch_details__box .flight-details-text p {
+        font-family: "Roboto", sans-serif;
+        font-size: 16px;
+        color: #fff; }
+  .launch_details__container iframe {
+    width: 100%;
+    height: 480px;
+    margin-top: 100px; }
+  .launch_details__container .flight-details-links p {
+    font-family: "Roboto", sans-serif;
+    font-size: 35px;
+    text-align: center;
+    color: #fff;
+    margin-top: 60px; }
+
+.multi-launch-section {
+  padding-top: 75px;
+  padding-bottom: 200px;
+  background-color: black;
+  background-image: url(../assets/multiLaunch-form-bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 25px -75px;
+  color: #fff;
+  text-align: center; }
+
+.multi-launch-section h2 {
+  color: #fff;
+  font-weight: 900;
+  margin-bottom: 30px;
+  letter-spacing: 5px;
+  font-size: 2.5rem; }
+
+.multi-launch-section h3 {
+  margin-bottom: 100px;
+  letter-spacing: 2px; }
+
+.multi-launch-section a {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase; }
+
+.multi-launch-section label {
+  margin-left: 30px;
+  font-size: 1.125rem; }
+
+.multi-launch-section select {
+  margin-left: 25px;
+  padding: 5px 30px;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  border: 1px solid #555;
+  color: white;
+  text-transform: uppercase;
+  transition: all 0.5s;
+  font-size: 1.125rem; }
+
+.multi-launch-section select:hover {
+  color: #eff0a8;
+  background-color: rgba(134, 165, 199, 0.5); }
+
+.multi-launch-section option {
+  background-color: black; }
+
+.multi-launch-section input {
+  display: block;
+  margin: 0 auto;
+  margin-top: 50px;
+  padding: 5px 30px;
+  color: white;
+  background-color: transparent;
+  border: 2px solid transparent;
+  border-left: 2px dashed #555;
+  border-right: 2px dashed #555;
+  transition: all 0.5s;
+  font-size: 1.125rem; }
+
+.multi-launch-section input:hover {
+  color: #86a5c7;
+  border: 2px dashed #555; }
+
+.multi-launch-form {
+  margin: 0 auto;
+  margin-bottom: 250px; }
+
+.multi-launch-generated-map {
+  padding: 250px 0px;
+  background-color: black;
+  color: white;
+  text-align: center; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
   font-family: "Roboto", sans-serif;
   font-size: 100%; }
 
 .wrapper {
   max-width: 1080px;
-  width: 90%; }
+  width: 90%;
+  margin: 0 auto; }
 
 h2 {
-  font-family: "Arial", sans-serif;
-  font-size: 3.125rem; }
+  font-family: "Arial", sans-serif; }
 
 img {
   width: 100%; }
-
-.patch {
-  width: 250px; }
-
-.timer {
-  width: 500px; }
-
-div[style] {
-  background: green; }
-
-.timer .section div[style] {
-  background-color: red;
-  font-size: 12px; }
