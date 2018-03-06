@@ -10,7 +10,6 @@ body{
 
 h2{
     color: $fourthcolor;
-    margin-bottom: 40px;
     .index{
         font-size: 12px;
         font-weight: 400;
@@ -32,7 +31,7 @@ h2{
 // Homepage Hero
 .homepage{
     margin: 0;
-    padding: 40px 0 0 0;
+    
     // height: 100vh;
     background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('../../public/assets/space-hero-image.jpg'); 
     background-repeat: repeat-y;
@@ -42,7 +41,8 @@ h2{
 
 // Panel Styles
 .panel{
-    height: 90vh;
+    height: 80vh;
+    margin-bottom: 50px;
 }
 
 .parallax{
@@ -52,7 +52,7 @@ h2{
     border: 2px solid white;
     border-radius: 5px 5px;
     width: 80%;
-    height: 550px;
+    height: 80vh;
     margin: 20px auto;
     position: relative;
     top: 50%;

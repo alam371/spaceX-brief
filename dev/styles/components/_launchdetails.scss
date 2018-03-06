@@ -1,7 +1,7 @@
 .launch_details__container{
-    background-image: linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.1)),url('../../public/assets/space-hero-image.jpg');
-    background-size: cover;
-    background-position: center;
+    background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('../../public/assets/space-hero-image.jpg');
+    background-size: contain;
+    // background-position: center;
 
     h2{
         font-family: $headerfont;
@@ -11,43 +11,97 @@
         text-transform: uppercase;
     }
 
+    // Panel Container
     .launch_details__box{
-        width: 100%;
-        background: $maincolor;
+        .parallax{
+            padding: 100px 40px;
+
+        }
 
         .patch{
-            width: 250px;
             float: left;
             width: 50%;
             padding: 15px 20px;
+            position: relative; 
+            top: 50%;
+            transform: translateY(-50%);
+            img{
+                width: 450px;
+            }
+        }
+
+        .launch-info-container{
+            float: left;
+            width: 50%;
         }
 
         .flight-details-text{  
-            float: left;
-            width: 50%;
-            padding: 15px 30px;
+            text-align: left;
+            margin-bottom: 40px;
+            h4{
+                font-weight: 500;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+                border-bottom: 1px solid white;
+                padding-bottom: 8px;
+            }
             p{
                 font-family: $mainfont;
                 font-size: 16px;
                 color:$fourthcolor;
+                margin: 10px 0;
+                line-height: 25px;
             }
+        }
+
+        // Links 
+        .flight-details-links{
+            text-align: left;
+            .about-this-flight{
+                font-weight: 500;
+                text-transform: uppercase;
+                margin: 20px 0 20px 0;
+                letter-spacing: 0.5px;
+                border-bottom: 1px solid white;
+                padding-bottom: 5px;
+            }
+            p{
+                font-family: $mainfont;
+                font-size: 16px;
+                color: $fourthcolor;
+                margin: 10px 0;
+                a{
+                    text-transform: uppercase;
+                    color: $secondcolor;
+                    text-decoration: none;
+                    border-bottom: 1px solid $secondcolor;
+                    letter-spacing: 0.5px;
+                }
+            }
+
         }
     }
 
+    .fa-arrow-alt-circle-left{
+        color: white;
+        float: left;
+        font-size: 50px;
+        position: fixed;
+        right: 50px;
+        bottom: 10px;
+    }
+
+    .video-container .parallax{
+        margin: 0 auto;
+        padding: 0;
+    }
+    // Youtube Video
     iframe{
         width: 100%;
         height: 480px;
-        margin-top: 100px;
-    }
-
-    .flight-details-links{
-        p{
-            font-family: $mainfont;
-            font-size: 35px;
-            text-align: center;
-            color: $fourthcolor;
-            margin-top: 60px;
-        }
-    }
+        position: relative; 
+        top: 50%;
+        transform: translateY(-50%);
+    }  
 }
 
