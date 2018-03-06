@@ -13,9 +13,7 @@ class LaunchDetails extends React.Component {
 
     componentDidMount() {
         axios.get(`https://api.spacexdata.com/v2/launches?flight_number=${this.props.match.params.flight_number}`).then(({ data }) => {
-            // console.log(data);
             const launchInfo = data;
-            // console.log(launchInfo);
             this.setState({
                 missionInfo: launchInfo,
             })
@@ -24,7 +22,6 @@ class LaunchDetails extends React.Component {
     }
 
     render() {
-        console.log(this.state.missionInfo);
         return (
             <div className="launch_details__container">
                 <div className="wrapper">

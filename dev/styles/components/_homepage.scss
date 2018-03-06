@@ -32,7 +32,7 @@ h2{
 // Homepage Hero
 .homepage{
     margin: 0;
-    padding: 0;
+    padding: 40px 0 0 0;
     // height: 100vh;
     background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('../../public/assets/space-hero-image.jpg'); 
     background-repeat: repeat-y;
@@ -43,15 +43,13 @@ h2{
 // Panel Styles
 .panel{
     height: 90vh;
-    background: black;
-    clip-path: inset(10px 20px 30px 40px);
-     background-clip: border-box;
 }
 
 .parallax{
+    background: rgba(0, 0, 0, 0.6);
     // background: transparent;
     padding: 60px 0;
-    // border: 2px solid white;
+    border: 2px solid white;
     border-radius: 5px 5px;
     width: 80%;
     height: 550px;
@@ -67,12 +65,14 @@ h2{
 
 .tagline{
     color: $fourthcolor;
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
     line-height: 1.6rem;
-    // text-transform: uppercase;
+    color: lightgrey;
     font-weight: 300;
     letter-spacing: 1px;
+    line-height: 30px;
+    position: relative;
 }
 
 .tagline:before{
@@ -80,9 +80,11 @@ h2{
     color: $secondcolor;
     font-size: 70px;
     font-family: sans-serif;
-    // position: absolute;
-    // top: 25px;
-    // right: 10px;
+    position: absolute;
+    top: 15px;
+    left: -20px;
+    margin: 0;
+    padding: 0;
 }
 
 .tagline:after{
@@ -90,8 +92,10 @@ h2{
     color: $secondcolor;
     font-size: 70px;  
     font-family: sans-serif;
-    // position: absolute;
-    // top: 25px;
+    position: absolute;
+    top: 48px;
+    right: -5px;
+    margin: 0;
 }
 
 // Upcoming Launch Panel
@@ -109,6 +113,11 @@ h2{
     width: 33.33%;
     float: left;
     margin: 80px 0 50px 0;
+    color: $secondcolor;
+    font-size: 25px;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-family: Arial;
 }
 
 .left{
