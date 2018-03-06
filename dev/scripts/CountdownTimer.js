@@ -7,7 +7,7 @@ const SimpleComponent = (props) => {
         <div className="timer">
             <div className="timer-container">
                 <div className="countdown-block"></div>
-                <CountdownTimer endDate={moment(`${[props.data[0].launch_date_utc]}`)} />
+                <CountdownTimer endDate={moment(`${[props.data[0].launch_date_utc]}`) } />
             </div>
         </div>
     );

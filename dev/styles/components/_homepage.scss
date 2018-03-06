@@ -1,15 +1,11 @@
-// Headers and Titles in Arial
-// All other text is Roboto
-// Buttons: rectangle, clean, no drop shadows, bordered rectangle, 18px, uppercase text, Roboto
-// Dropdowns: white dropdowns, arrows styling tbd (one arrow instead of double on Firefox), add padding, experiment with borders, upppercase text
-// Big space background image / black site
-
-
 body{
     margin: 0;
     padding: 0;
     text-align: center;
+}
 
+.spaceX{
+    font-size: 60px;
 }
 
 h2{
@@ -21,15 +17,19 @@ h2{
         position: relative;
         bottom: 20px;
         right: 5px;
-        color: lightgrey;
+        color: $secondcolor;
         // border: 1px solid white;
         padding: 5px;
         // border-radius: 5px 5px;
     }
 }
 
-// Homepage Hero
+.home-header{
+    margin-bottom: 10px;
+    font-size: 40px;
+}  
 
+// Homepage Hero
 .homepage{
     margin: 0;
     padding: 0;
@@ -42,17 +42,19 @@ h2{
 
 // Panel Styles
 .panel{
-    height: 80vh;
+    height: 90vh;
     background: black;
     clip-path: inset(10px 20px 30px 40px);
+     background-clip: border-box;
 }
+
 .parallax{
     // background: transparent;
     padding: 60px 0;
-    border: 2px solid white;
+    // border: 2px solid white;
     border-radius: 5px 5px;
     width: 80%;
-    height: 500px;
+    height: 550px;
     margin: 20px auto;
     position: relative;
     top: 50%;
@@ -61,36 +63,44 @@ h2{
     color: white;
 }
 
-
-
-.spaceX{
-    font-size: 60px;
-}
+// About SpaceX Panel
 
 .tagline{
     color: $fourthcolor;
     max-width: 800px;
     margin: 0 auto;
     line-height: 1.6rem;
-    text-transform: uppercase;
+    // text-transform: uppercase;
     font-weight: 300;
     letter-spacing: 1px;
-    margin-top: 40px;
 }
 
-.home-header{
-    margin-bottom: 10px;
-    font-size: 40px;
-    // border-bottom: 1px solid white;
-    // border-width: 20%;
-}  
+.tagline:before{
+    content: open-quote;
+    color: $secondcolor;
+    font-size: 70px;
+    font-family: sans-serif;
+    // position: absolute;
+    // top: 25px;
+    // right: 10px;
+}
+
+.tagline:after{
+    content: close-quote;
+    color: $secondcolor;
+    font-size: 70px;  
+    font-family: sans-serif;
+    // position: absolute;
+    // top: 25px;
+}
+
+// Upcoming Launch Panel
 
 .launch-stats{
     width: 900px;
-    margin: 40px auto 30px auto;
+    margin: 0 auto;
     font-weight: 300;
     letter-spacing: 1px;
-
 }
 
 .launch-stats p{
@@ -98,6 +108,7 @@ h2{
     text-align: center;
     width: 33.33%;
     float: left;
+    margin: 80px 0 50px 0;
 }
 
 .left{
@@ -108,32 +119,46 @@ h2{
     text-align: right;
 }
 
-.middle{
-    border-left: 1px solid grey;
-    border-right: 1px solid grey;
-    margin: 0 auto;
+// Floating Rocket Icon
+svg{
+    margin-top: 30px;
+    height: 200px;
+    fill: lightgrey;
+    box-sizing: border-box;
+	animation: float 6s ease-in-out infinite;
 }
 
+@keyframes float {
+	0% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+		transform: translatey(-20px);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+}
+
+
 // Countdown Timer Styles
+
 .timer{
     width: 500px;
-    // position: absolute;
-    // top: 10px;
-    // right: 0;
-    margin: 0 auto;
-
+    margin: 20px auto;
 }
 
 .timer div[style]{
     background: none;
-    // display: block;
-    // height: 60px !important;
     padding: 20px 20px 40px 20px;
 }
 
 // Countdown Background Plate
 .section[style]{
-    background-color:rgba(211, 211, 211, 1) !important;
+    background-color: lightgrey !important;
     border-radius: 5px !important;
     position: relative !important;
     padding: 0 !important;
@@ -153,6 +178,7 @@ h2{
     position: absolute !important;
     top: 50% !important;
     transform: translateY(-50%) !important;
+   
 }
 
 // Label for Numbers
@@ -165,15 +191,16 @@ h2{
     text-align: center !important;
     position: relative !important;
     top: 90px;
+    margin-top: 20px !important;
     background: none !important;
-    color:  lightgrey !important;
+    color: $secondcolor !important;
 }
 
 .countdown-block{
     width: 500px;
     height: 15px;
     border-radius: 5px 5px;
-    background: rgb(119, 118, 118);
+    background: rgb(83, 83, 83);
     position: relative;
     top: 75px;
 }
@@ -186,8 +213,9 @@ h2{
 }
 
 
-// Form Styling
+// Select Launch Panel
 
+// Form Styling
 form{
     border: none;
     margin-top: 80px;
@@ -214,6 +242,7 @@ select{
 }
 
 
+// Multi Launch Map Panel
 
 // Pin Animation 
 .pin {
