@@ -13,7 +13,9 @@ import {
 
 // API Keys:
 // Joey's Key: AIzaSyBoOK_LZFkhKIDq2Ihzl1wBdD0Eo9gC-ag
+// Joey's Second Key: AIzaSyBnIIYzqfH24TR2iFHpPVmhP9Z9GSO3FIU
 // Angeline's Key: AIzaSyDHH-sUXf3qfy-eySEqhbkLd38Zpw4G0Jw
+// Angeline's Second Key: AIzaSyBLOA1LmeuBR4_8PiWQ1Y1OOlI4G1yAdGg
 // Quinn's Key: AIzaSyDt8WM7sOF8k5AYaAVfsGyLeHF8AiilnQs
 
 class MultiLaunchMap extends React.Component {
@@ -21,12 +23,11 @@ class MultiLaunchMap extends React.Component {
         super();
         this.state = {
             mapInfo: [],
-            startDate: '',
-            endDate: '',
+            startDate: 1,
+            endDate: 1,
             userSelectMap: [],
             userSelectLocations: [],
             generatedUserMap: false,
-            // Make sure to come back and set initial state for Start and End date to a number!
         }
         this.getStartDate = this.getStartDate.bind(this);
         this.getEndDate = this.getEndDate.bind(this);
@@ -45,13 +46,12 @@ class MultiLaunchMap extends React.Component {
 
     formSubmit(e) {
         e.preventDefault();
-        // ONCE THIS ALERT IS TRIPPED ONCE, IT KEEPS TRIPPING ON EVERY SELECTION AFTER THAT. NEED TO FIX THIS IN ORDER TO ALLOW USER TO RESUBMIT A SEARCH!
         this.state.startDate > this.state.endDate ? alert('Incorrect submission of date. Please check your selection again.') : null;
         const slicedMapInfo = this.state.mapInfo.slice(this.state.startDate - 1, this.state.endDate);
         this.setState({
             userSelectMap: slicedMapInfo
         });
-
+        console.log(slicedMapInfo);
         const userSelect = slicedMapInfo.map((item) => {
             return this.getGeoCoords(item.launch_site.site_name_long)
         });
@@ -60,10 +60,8 @@ class MultiLaunchMap extends React.Component {
                 userSelectLocations: data.map((item) => {
                     return item.data.results[0].geometry.location
                 }),
+                generatedUserMap: true,
             })
-        })
-        this.setState({
-            generatedUserMap: true,
         })
     }
 
@@ -78,7 +76,25 @@ class MultiLaunchMap extends React.Component {
             params: {
                 reqUrl: 'https://maps.googleapis.com/maps/api/place/textsearch/json',
                 params: {
-                    key: "AIzaSyDHH-sUXf3qfy-eySEqhbkLd38Zpw4G0Jw",
+                    key: "AIzaSyDt8WM7sOF8k5AYaAVfsGyLeHF8AiilnQs",
+                    query: longName,
+                }
+            }
+        })
+    }
+
+    getGeoCoords(longName) {
+        return axios({
+            method: 'GET',
+            url: 'https://proxy.hackeryou.com',
+            dataResponse: 'json',
+            paramsSerializer: function (params) {
+                return Qs.stringify(params, { arrayFormat: 'brackets' })
+            },
+            params: {
+                reqUrl: 'https://maps.googleapis.com/maps/api/place/textsearch/json',
+                params: {
+                    key: "AIzaSyBLOA1LmeuBR4_8PiWQ1Y1OOlI4G1yAdGg",
                     query: longName,
                 }
             }
@@ -87,13 +103,13 @@ class MultiLaunchMap extends React.Component {
 
     getStartDate(e) {
         this.setState({
-            startDate: e.target.value
+            startDate: Number(e.target.value)
         })
     }
 
     getEndDate(e) {
         this.setState({
-            endDate: e.target.value
+            endDate: Number(e.target.value)
         })
     }
 
