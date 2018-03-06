@@ -102,6 +102,7 @@ class MultiLaunchMap extends React.Component {
             <section>
                 <div className="multi-launch-section">
                     <div className="wrapper">
+                        <Link to="/home">Home</Link>
                         <h2>SpaceX Launch Map</h2>
                         <h3>Select a Date Range to View Launches</h3>
                         <div className="multi-launch-form">
@@ -125,7 +126,6 @@ class MultiLaunchMap extends React.Component {
                                 <input type="submit" value="Submit" />
                             </form>
                         </div>
-                        <Link to="/home">Home</Link>
                     </div>
                 </div>
                 <div className="multi-launch-generated-map">

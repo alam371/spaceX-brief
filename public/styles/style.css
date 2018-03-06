@@ -136,6 +136,9 @@ body {
   padding: 0;
   text-align: center; }
 
+.spaceX {
+  font-size: 60px; }
+
 h2 {
   color: #fff;
   margin-bottom: 40px; }
@@ -145,8 +148,12 @@ h2 {
     position: relative;
     bottom: 20px;
     right: 5px;
-    color: lightgrey;
+    color: #86a5c7;
     padding: 5px; }
+
+.home-header {
+  margin-bottom: 10px;
+  font-size: 40px; }
 
 .homepage {
   margin: 0;
@@ -157,16 +164,16 @@ h2 {
   background-attachment: fixed; }
 
 .panel {
-  height: 80vh;
+  height: 90vh;
   background: black;
-  clip-path: inset(10px 20px 30px 40px); }
+  clip-path: inset(10px 20px 30px 40px);
+  background-clip: border-box; }
 
 .parallax {
   padding: 60px 0;
-  border: 2px solid white;
   border-radius: 5px 5px;
   width: 80%;
-  height: 500px;
+  height: 550px;
   margin: 20px auto;
   position: relative;
   top: 50%;
@@ -174,26 +181,29 @@ h2 {
   background-clip: transparent;
   color: white; }
 
-.spaceX {
-  font-size: 60px; }
-
 .tagline {
   color: #fff;
   max-width: 800px;
   margin: 0 auto;
   line-height: 1.6rem;
-  text-transform: uppercase;
   font-weight: 300;
-  letter-spacing: 1px;
-  margin-top: 40px; }
+  letter-spacing: 1px; }
 
-.home-header {
-  margin-bottom: 10px;
-  font-size: 40px; }
+.tagline:before {
+  content: open-quote;
+  color: #86a5c7;
+  font-size: 70px;
+  font-family: sans-serif; }
+
+.tagline:after {
+  content: close-quote;
+  color: #86a5c7;
+  font-size: 70px;
+  font-family: sans-serif; }
 
 .launch-stats {
   width: 900px;
-  margin: 40px auto 30px auto;
+  margin: 0 auto;
   font-weight: 300;
   letter-spacing: 1px; }
 
@@ -201,7 +211,8 @@ h2 {
   line-height: 1.6rem;
   text-align: center;
   width: 33.33%;
-  float: left; }
+  float: left;
+  margin: 80px 0 50px 0; }
 
 .left {
   text-align: left; }
@@ -209,21 +220,34 @@ h2 {
 .right {
   text-align: right; }
 
-.middle {
-  border-left: 1px solid grey;
-  border-right: 1px solid grey;
-  margin: 0 auto; }
+svg {
+  margin-top: 30px;
+  height: 200px;
+  fill: lightgrey;
+  box-sizing: border-box;
+  animation: float 6s ease-in-out infinite; }
+
+@keyframes float {
+  0% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px); }
+  50% {
+    box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+    transform: translatey(-20px); }
+  100% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px); } }
 
 .timer {
   width: 500px;
-  margin: 0 auto; }
+  margin: 20px auto; }
 
 .timer div[style] {
   background: none;
   padding: 20px 20px 40px 20px; }
 
 .section[style] {
-  background-color: lightgray !important;
+  background-color: lightgrey !important;
   border-radius: 5px !important;
   position: relative !important;
   padding: 0 !important;
@@ -251,14 +275,15 @@ h2 {
   text-align: center !important;
   position: relative !important;
   top: 90px;
+  margin-top: 20px !important;
   background: none !important;
-  color: lightgrey !important; }
+  color: #86a5c7 !important; }
 
 .countdown-block {
   width: 500px;
   height: 15px;
   border-radius: 5px 5px;
-  background: #777676;
+  background: #535353;
   position: relative;
   top: 75px; }
 
@@ -435,7 +460,7 @@ body {
   transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s; }
 
 .launch_details__container {
-  background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url(../assets/jason-blackeye-213258-unsplash.jpg);
+  background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url("../../public/assets/space-hero-image.jpg");
   background-size: cover;
   background-position: center; }
   .launch_details__container h2 {
@@ -480,7 +505,8 @@ body {
   background-repeat: no-repeat;
   background-position: 25px -75px;
   color: #fff;
-  text-align: center; }
+  text-align: center;
+  height: 100vh; }
 
 .multi-launch-section h2 {
   color: #fff;
@@ -540,11 +566,11 @@ body {
 
 .multi-launch-form {
   margin: 0 auto;
-  margin-bottom: 250px; }
+  margin-bottom: 80px; }
 
 .multi-launch-generated-map {
-  padding: 250px 0px;
-  background-color: black;
+  padding: 80px 0px;
+  background-color: transparent;
   color: white;
   text-align: center; }
 
