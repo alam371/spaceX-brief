@@ -15,7 +15,6 @@
     .launch_details__box{
         .parallax{
             padding: 100px 40px;
-
         }
 
         .patch{
@@ -82,6 +81,7 @@
         }
     }
 
+    // Back                                                                 
     .fa-arrow-alt-circle-left{
         color: white;
         float: left;
@@ -91,11 +91,11 @@
         bottom: 10px;
     }
 
+    // Youtube Video
     .video-container .parallax{
         margin: 0 auto;
         padding: 0;
     }
-    // Youtube Video
     iframe{
         width: 100%;
         height: 480px;
