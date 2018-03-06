@@ -140,8 +140,7 @@ body {
   font-size: 60px; }
 
 h2 {
-  color: #fff;
-  margin-bottom: 40px; }
+  color: #fff; }
   h2 .index {
     font-size: 12px;
     font-weight: 400;
@@ -157,14 +156,14 @@ h2 {
 
 .homepage {
   margin: 0;
-  padding: 40px 0 0 0;
   background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../../public/assets/space-hero-image.jpg");
   background-repeat: repeat-y;
   background-size: cover;
   background-attachment: fixed; }
 
 .panel {
-  height: 90vh; }
+  height: 80vh;
+  margin-bottom: 50px; }
 
 .parallax {
   background: rgba(0, 0, 0, 0.6);
@@ -172,7 +171,7 @@ h2 {
   border: 2px solid white;
   border-radius: 5px 5px;
   width: 80%;
-  height: 550px;
+  height: 80vh;
   margin: 20px auto;
   position: relative;
   top: 50%;
@@ -476,41 +475,79 @@ body {
   transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s; }
 
 .launch_details__container {
-  background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url("../../public/assets/space-hero-image.jpg");
-  background-size: cover;
-  background-position: center; }
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../../public/assets/space-hero-image.jpg");
+  background-size: contain; }
   .launch_details__container h2 {
     font-family: "Arial", sans-serif;
     font-size: 50px;
     color: #fff;
     text-align: center;
     text-transform: uppercase; }
-  .launch_details__container .launch_details__box {
-    width: 100%;
-    background: #1e2529; }
-    .launch_details__container .launch_details__box .patch {
-      width: 250px;
-      float: left;
-      width: 50%;
-      padding: 15px 20px; }
-    .launch_details__container .launch_details__box .flight-details-text {
-      float: left;
-      width: 50%;
-      padding: 15px 30px; }
-      .launch_details__container .launch_details__box .flight-details-text p {
-        font-family: "Roboto", sans-serif;
-        font-size: 16px;
-        color: #fff; }
+  .launch_details__container .launch_details__box .parallax {
+    padding: 100px 40px; }
+  .launch_details__container .launch_details__box .patch {
+    float: left;
+    width: 50%;
+    padding: 15px 20px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%); }
+    .launch_details__container .launch_details__box .patch img {
+      width: 450px; }
+  .launch_details__container .launch_details__box .launch-info-container {
+    float: left;
+    width: 50%; }
+  .launch_details__container .launch_details__box .flight-details-text {
+    text-align: left;
+    margin-bottom: 40px; }
+    .launch_details__container .launch_details__box .flight-details-text h4 {
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      border-bottom: 1px solid white;
+      padding-bottom: 8px; }
+    .launch_details__container .launch_details__box .flight-details-text p {
+      font-family: "Roboto", sans-serif;
+      font-size: 16px;
+      color: #fff;
+      margin: 10px 0;
+      line-height: 25px; }
+  .launch_details__container .launch_details__box .flight-details-links {
+    text-align: left; }
+    .launch_details__container .launch_details__box .flight-details-links .about-this-flight {
+      font-weight: 500;
+      text-transform: uppercase;
+      margin: 20px 0 20px 0;
+      letter-spacing: 0.5px;
+      border-bottom: 1px solid white;
+      padding-bottom: 5px; }
+    .launch_details__container .launch_details__box .flight-details-links p {
+      font-family: "Roboto", sans-serif;
+      font-size: 16px;
+      color: #fff;
+      margin: 10px 0; }
+      .launch_details__container .launch_details__box .flight-details-links p a {
+        text-transform: uppercase;
+        color: #86a5c7;
+        text-decoration: none;
+        border-bottom: 1px solid #86a5c7;
+        letter-spacing: 0.5px; }
+  .launch_details__container .fa-arrow-alt-circle-left {
+    color: white;
+    float: left;
+    font-size: 50px;
+    position: fixed;
+    right: 50px;
+    bottom: 10px; }
+  .launch_details__container .video-container .parallax {
+    margin: 0 auto;
+    padding: 0; }
   .launch_details__container iframe {
     width: 100%;
     height: 480px;
-    margin-top: 100px; }
-  .launch_details__container .flight-details-links p {
-    font-family: "Roboto", sans-serif;
-    font-size: 35px;
-    text-align: center;
-    color: #fff;
-    margin-top: 60px; }
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%); }
 
 .multi-launch-section {
   padding-top: 75px;
@@ -604,7 +641,8 @@ body {
   margin: 0 auto; }
 
 h2 {
-  font-family: "Arial", sans-serif; }
+  font-family: "Arial", sans-serif;
+  padding: 40px 0 0 0; }
 
 img {
   width: 100%; }

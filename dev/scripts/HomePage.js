@@ -53,6 +53,11 @@ class HomePage extends React.Component {
         return(
             // Home Page Panel
            <div className="homepage">
+                <ul>
+                    <li><Link to="/multiLaunchMap">Launches Map</Link></li>
+                    <li><Link to="/multiLaunchMap">Launches Map</Link></li>
+
+                </ul>
            
                 {/* About SpaceX */}
                 <h2 className="spaceX">SpaceX Launch Tracker</h2>
