@@ -80,8 +80,8 @@ class LaunchDetails extends React.Component {
                                             </div>    
                                         </div>
                                     </div>
-                                <Link to="/home"><i class="far fa-arrow-alt-circle-left"></i></Link>
                                 </div>
+                                <Link to="/home"><i class="far fa-arrow-alt-circle-left"></i></Link>
                             </div>
                         )
                     })}

@@ -136,10 +136,8 @@ body {
   padding: 0;
   text-align: center; }
 
-.spaceX {
-  font-size: 60px; }
-
 h2 {
+  font-size: 60px;
   color: #fff; }
   h2 .index {
     font-size: 12px;
@@ -565,12 +563,13 @@ body {
   color: #fff;
   font-weight: 900;
   margin-bottom: 30px;
-  letter-spacing: 5px;
-  font-size: 2.5rem; }
+  letter-spacing: 5px; }
 
 .multi-launch-section h3 {
   margin-bottom: 100px;
-  letter-spacing: 2px; }
+  letter-spacing: 2px;
+  font-weight: 400;
+  text-transform: uppercase; }
 
 .multi-launch-section a {
   color: #fff;
@@ -601,21 +600,23 @@ body {
   background-color: black; }
 
 .multi-launch-section input {
-  display: block;
-  margin: 0 auto;
-  margin-top: 50px;
-  padding: 5px 30px;
-  color: white;
-  background-color: transparent;
-  border: 2px solid transparent;
-  border-left: 2px dashed #555;
-  border-right: 2px dashed #555;
-  transition: all 0.5s;
-  font-size: 1.125rem; }
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 15px 20px;
+  color: #fff;
+  font-weight: 300;
+  letter-spacing: 1px;
+  box-shadow: inset 0 0 0 2px white;
+  position: relative;
+  vertical-align: middle;
+  cursor: pointer; }
 
-.multi-launch-section input:hover {
-  color: #86a5c7;
-  border: 2px dashed #555; }
+.multi-launch-section input::before, .multi-launch-section input::after {
+  box-sizing: inherit;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%; }
 
 .multi-launch-form {
   margin: 0 auto;
