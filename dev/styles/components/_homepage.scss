@@ -155,9 +155,30 @@ svg{
 
 // Countdown Timer Styles
 .timer{
-    width: 500px;
+    width: 700px;
     margin: 0 auto;
 }
+
+.timer-container div[style] div[style]:first-child{
+    min-width: 100px !important;
+    min-height: 100px !important;
+    background-color: lightgrey !important;
+    border-radius: 5px !important;
+    position: relative !important;
+    margin: 0 10px !important;
+    height: 40px !important;
+    width: 40px !important;
+}
+
+.timer-container div[style] div[style]:first-child{
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.timer-container div[style] div[style] div[style]:first-child{
+    padding-top: 25px !important;
+}
+
 
 .timer div[style]{
     background: none;
@@ -170,24 +191,24 @@ svg{
     border-radius: 5px !important;
     position: relative !important;
     padding: 0 !important;
-    margin: 0 10px !important;
     height: 40px !important;
     width: 40px !important;
 }
 
 // Countdown Numbers
 .time[style]{
-    display: block !important;
+    // display: block !important;
     color: black !important;
     font-size: 40px !important;
-    padding: 0 !important;
+    margin-top: 20px !important;
     margin: 0 !important;
     letter-spacing: 0.5px !important;
     font-family: $mainfont !important;
     background-color: none !important;
-    position: absolute !important;
-    top: 50% !important;
-    transform: translateY(-50%) !important;   
+    align-content: center !important;
+    // position: absolute !important;
+    // top: 50% !important;
+    // transform: translateY(-50%) !important;   
 }
 
 // Label for Numbers
@@ -199,14 +220,13 @@ svg{
     font-size: 15px !important;
     text-align: center !important;
     position: relative !important;
-    top: 90px;
     margin-top: 2px !important;
     background: none !important;
     color: $secondcolor !important;
 }
 
 .countdown-block{
-    width: 500px;
+    width: 700px;
     height: 15px;
     border-radius: 5px 5px;
     background: rgb(83, 83, 83);
@@ -449,6 +469,10 @@ select{
         padding-bottom: 50px;
     }
 
+    .parallax{
+        padding-bottom: 40px;
+    }
+
     form{
         margin: 0px;
         margin-top: 30px;
@@ -466,11 +490,8 @@ select{
         margin: 0 auto;
         margin-bottom: 25px;
     }
-}
 
-@media (max-width: 922px){
-
-    .parallax .home-header{
+     .parallax .home-header{
         margin-bottom: 0;
         padding-bottom: 0;
     }
@@ -498,8 +519,11 @@ select{
             margin-bottom: 0;
             padding: 0;
         }
-}
 
+        .timer-container{
+            display: none;
+        }
+}
 
 @media (max-width: 645px){
     .section[style]{
