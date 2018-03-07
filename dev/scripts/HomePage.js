@@ -118,7 +118,7 @@ class HomePage extends React.Component {
                         
                         {/* Multi Launch Map Panel */}
                         <div className="multi-launch-map panel">
-                            <div className="parallax">
+                        <div className="parallax goMap">
                                 <h2 className="home-header"><span className="index">04</span>Map of Past Launches</h2>
                                
 
