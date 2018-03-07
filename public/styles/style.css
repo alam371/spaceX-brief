@@ -137,7 +137,7 @@ body {
 h2 {
   font-size: 60px;
   color: #fff;
-  padding: 60px; }
+  padding: 60px 0 0 0; }
 
 .index {
   font-size: 12px;
@@ -272,7 +272,7 @@ svg {
   text-align: center !important;
   position: relative !important;
   top: 90px;
-  margin-top: 20px !important;
+  margin-top: 2px !important;
   background: none !important;
   color: #86a5c7 !important; }
 
@@ -422,6 +422,9 @@ select {
     border: none;
     text-transform: uppercase; }
 
+.goMap {
+  padding-bottom: 60px; }
+
 .home-page-button::before, .home-page-button::after {
   box-sizing: inherit;
   content: "";
@@ -475,6 +478,9 @@ select {
     margin-bottom: 25px; } }
 
 @media (max-width: 922px) {
+  .parallax .home-header {
+    margin-bottom: 0;
+    padding-bottom: 0; }
   .launch-stats
 p {
     display: block;
@@ -485,7 +491,13 @@ p {
   .dynamic-text {
     font-size: 12px;
     line-height: 30px;
-    margin-top: 10px; } }
+    margin-top: 10px; }
+  .tagline {
+    margin-bottom: 0;
+    padding-bottom: 0; }
+  .us-map {
+    margin-bottom: 0;
+    padding: 0; } }
 
 @media (max-width: 645px) {
   .section[style] {
@@ -502,6 +514,10 @@ p {
 @media (max-width: 530px) {
   .tagline {
     text-align: left; } }
+
+* {
+  margin: 0;
+  padding: 0; }
 
 body {
   margin: 0;
@@ -634,7 +650,8 @@ body {
     font-size: 50px;
     position: fixed;
     right: 50px;
-    bottom: 10px; }
+    bottom: 10px;
+    z-index: 10; }
   .launch_details__container .video-container .parallax {
     margin: 0 auto;
     padding: 0;
