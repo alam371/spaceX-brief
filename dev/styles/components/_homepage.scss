@@ -5,8 +5,7 @@ body{
 h2{
     font-size: 60px;
     color: $fourthcolor;
-    // margin-top: 0;
-    padding: 60px;
+    padding: 60px 0 0 0;
 }
 
 .index{
@@ -201,7 +200,7 @@ svg{
     text-align: center !important;
     position: relative !important;
     top: 90px;
-    margin-top: 20px !important;
+    margin-top: 2px !important;
     background: none !important;
     color: $secondcolor !important;
 }
@@ -270,8 +269,6 @@ select{
 
 
 // Multi Launch Map Panel
-
-
 .multi-launch-map .home-header{
     margin-bottom: 50px;
 }
@@ -397,6 +394,10 @@ select{
     }
 }
 
+.goMap{
+    padding-bottom: 60px;
+}
+
 .home-page-button::before, .home-page-button::after {
     box-sizing: inherit;
     content: "";
@@ -440,6 +441,7 @@ select{
     color: $secondcolor;
 }
 
+// Responsive Styles
 
 @media (max-width: 922px){
     .parallax.launch-form{
@@ -466,13 +468,13 @@ select{
     }
 }
 
-
-// @media (max-width:730px){
-//     .launch-stats 
-// }
-
-
 @media (max-width: 922px){
+
+    .parallax .home-header{
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
     .launch-stats 
         p{
             display: block;
@@ -480,12 +482,21 @@ select{
             margin: 0;
             padding: 10px;
             line-height: 25px;
-            // font-size: 16px;
         }
         .dynamic-text{
             font-size: 12px;
             line-height: 30px;
             margin-top: 10px;
+        }
+
+        .tagline{
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .us-map{
+            margin-bottom: 0;
+            padding: 0;
         }
 }
 
@@ -514,8 +525,4 @@ select{
     .tagline{
         text-align: left;
     }
-
-    // .us-map{
-    //     padding: 2%;
-    // }
 }
