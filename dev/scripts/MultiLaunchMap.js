@@ -76,25 +76,7 @@ class MultiLaunchMap extends React.Component {
             params: {
                 reqUrl: 'https://maps.googleapis.com/maps/api/place/textsearch/json',
                 params: {
-                    key: "AIzaSyDt8WM7sOF8k5AYaAVfsGyLeHF8AiilnQs",
-                    query: longName,
-                }
-            }
-        })
-    }
-
-    getGeoCoords(longName) {
-        return axios({
-            method: 'GET',
-            url: 'https://proxy.hackeryou.com',
-            dataResponse: 'json',
-            paramsSerializer: function (params) {
-                return Qs.stringify(params, { arrayFormat: 'brackets' })
-            },
-            params: {
-                reqUrl: 'https://maps.googleapis.com/maps/api/place/textsearch/json',
-                params: {
-                    key: "AIzaSyBLOA1LmeuBR4_8PiWQ1Y1OOlI4G1yAdGg",
+                    key: "AIzaSyBnIIYzqfH24TR2iFHpPVmhP9Z9GSO3FIU",
                     query: longName,
                 }
             }
@@ -118,7 +100,6 @@ class MultiLaunchMap extends React.Component {
             <section>
                 <div className="multi-launch-section">
                     <div className="wrapper">
-                        <Link to="/home">Home</Link>
                         <h2>SpaceX Launch Map</h2>
                         <h3>Select a Date Range to View Launches</h3>
                         <div className="multi-launch-form">
@@ -143,6 +124,7 @@ class MultiLaunchMap extends React.Component {
                             </form>
                         </div>
                     </div>
+                    <Link to="/home"><i className="far fa-arrow-alt-circle-left"></i></Link>
                 </div>
                 <div className="multi-launch-generated-map">
                     <div className="wrapper">

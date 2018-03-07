@@ -24,7 +24,7 @@ class LaunchDetails extends React.Component {
     render() {
         return (
             <div className="launch_details__container">
-                {/* <div className="wrapper"> */}
+                <div className="wrapper">
                     
                     <h2>Launch Details</h2>
                     {this.state.missionInfo.map((item) => {
