@@ -31,8 +31,6 @@ h2{
 // Homepage Hero
 .homepage{
     margin: 0;
-    
-    // height: 100vh;
     background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('../../public/assets/space-hero-image.jpg'); 
     background-repeat: repeat-y;
     background-size: cover;
@@ -47,16 +45,12 @@ h2{
 
 .parallax{
     background: rgba(0, 0, 0, 0.6);
-    // background: transparent;
     padding: 60px 0;
     border: 2px solid white;
     border-radius: 5px 5px;
     width: 80%;
     height: 80vh;
     margin: 20px auto;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
     background-clip: transparent;
     color: white;
 }
