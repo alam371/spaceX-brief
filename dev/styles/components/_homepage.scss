@@ -1,23 +1,27 @@
 body{
-    margin: 0;
-    padding: 0;
     text-align: center;
 }
 
 h2{
     font-size: 60px;
     color: $fourthcolor;
-    .index{
-        font-size: 12px;
-        font-weight: 400;
-        position: relative;
-        bottom: 20px;
-        right: 5px;
-        color: $secondcolor;
-        // border: 1px solid white;
-        padding: 5px;
-        // border-radius: 5px 5px;
-    }
+    // margin-top: 0;
+    padding: 60px;
+}
+
+.index{
+    font-size: 12px;
+    font-weight: 400;
+    position: relative;
+    bottom: 20px;
+    right: 5px;
+    color: $secondcolor;
+    padding: 5px;
+}
+
+.homepage-title{
+    margin: 0;
+    // padding: 0;
 }
 
 .home-header{
@@ -27,39 +31,26 @@ h2{
 
 // Homepage Hero
 .homepage{
-    margin: 0;
-    
-    // height: 100vh;
     background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('../../public/assets/space-hero-image.jpg'); 
     background-repeat: repeat-y;
     background-size: cover;
     background-attachment: fixed;
-}
-
-// Panel Styles
-.panel{
-    height: 80vh;
-    margin-bottom: 50px;
+    padding: 25px;
 }
 
 .parallax{
     background: rgba(0, 0, 0, 0.6);
-    // background: transparent;
     padding: 60px 0;
     border: 2px solid white;
     border-radius: 5px 5px;
-    width: 80%;
     height: 80vh;
-    margin: 20px auto;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
+    margin: 40px auto;
     background-clip: transparent;
     color: white;
+    padding: 0 5%;
 }
 
 // About SpaceX Panel
-
 .tagline{
     color: $fourthcolor;
     max-width: 900px;
@@ -70,52 +61,65 @@ h2{
     letter-spacing: 1px;
     line-height: 30px;
     position: relative;
+    padding-bottom: 30px;
 }
 
-.tagline:before{
-    content: open-quote;
-    color: $secondcolor;
-    font-size: 70px;
-    font-family: sans-serif;
-    position: absolute;
-    top: 15px;
-    left: -20px;
-    margin: 0;
-    padding: 0;
-}
+// .tagline:before{
+//     content: open-quote;
+//     color: $secondcolor;
+//     font-size: 70px;
+//     font-family: sans-serif;
+//     relative: absolute;
+//     top: 15px;
+//     // left: -20px;
+//     margin-right: 5%;
+//     padding: 0;
+// }
 
-.tagline:after{
-    content: close-quote;
+// .tagline:after{
+//     content: close-quote;
+//     color: $secondcolor;
+//     font-size: 70px;  
+//     font-family: sans-serif;
+//     position: relative;
+//     top: 48px;
+//     // right: -5px;
+//     margin-left: 5%;
+// }
+
+.quotable{
     color: $secondcolor;
-    font-size: 70px;  
-    font-family: sans-serif;
-    position: absolute;
-    top: 48px;
-    right: -5px;
-    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    
 }
 
 // Upcoming Launch Panel
 
 .launch-stats{
-    width: 900px;
     margin: 0 auto;
     font-weight: 300;
     letter-spacing: 1px;
+    p{
+        line-height: 1.6rem;
+        text-align: center;
+        width: 33.33%;
+        float: left;
+        padding: 30px 0 50px 0;
+        font-weight: 300;
+        font-family: Arial;
+        color: darkgrey;
+        text-transform: uppercase;
+    }
+    .dynamic-text{
+        font-size: 25px;
+        color: $secondcolor;
+        display: block;
+        // padding-top: 30px;
+
+    }
 }
 
-.launch-stats p{
-    line-height: 1.6rem;
-    text-align: center;
-    width: 33.33%;
-    float: left;
-    margin: 80px 0 50px 0;
-    color: $secondcolor;
-    font-size: 25px;
-    font-weight: 300;
-    text-transform: uppercase;
-    font-family: Arial;
-}
 
 .left{
     text-align: left;
@@ -151,10 +155,9 @@ svg{
 
 
 // Countdown Timer Styles
-
 .timer{
     width: 500px;
-    margin: 20px auto;
+    margin: 0 auto;
 }
 
 .timer div[style]{
@@ -169,6 +172,8 @@ svg{
     position: relative !important;
     padding: 0 !important;
     margin: 0 10px !important;
+    height: 40px !important;
+    width: 40px !important;
 }
 
 // Countdown Numbers
@@ -183,8 +188,7 @@ svg{
     background-color: none !important;
     position: absolute !important;
     top: 50% !important;
-    transform: translateY(-50%) !important;
-   
+    transform: translateY(-50%) !important;   
 }
 
 // Label for Numbers
@@ -211,15 +215,32 @@ svg{
     top: 75px;
 }
 
-.count-up{
-    font-size: 22px;
-    font-weight: 400;
-    text-transform: uppercase;
-
-}
-
 
 // Select Launch Panel
+
+.select-launch .home-header{
+    margin-bottom: 50px;
+}
+
+.count-up{
+    font-size: 25px;
+    font-weight: 300;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: $secondcolor;
+    span{
+        font-weight: 400;
+        border-bottom: 2px solid $secondcolor;
+        border-top: 2px solid $secondcolor;
+    }
+}
+
+.select-text{
+    font-size: 16px;
+    font-weight: 300;
+    margin: 40px 0 100px 0;
+    letter-spacing: 1px;
+}
 
 // Form Styling
 form{
@@ -250,7 +271,19 @@ select{
 
 // Multi Launch Map Panel
 
-// Pin Animation 
+
+.multi-launch-map .home-header{
+    margin-bottom: 50px;
+}
+
+// US Map
+.us-map{
+    width: 350px;
+    margin: 20px auto 60px auto;
+    position: relative;
+}
+
+// Pin Animation
 .pin {
   width: 30px;
   height: 30px;
@@ -258,15 +291,16 @@ select{
   background: $secondcolor;
   position: absolute;
   transform: rotate(-45deg);
-  left: 50%;
+  right: 25%;
   top: 50%;
   margin: -20px 0 0 -20px;
 }
+
 .pin:after {
   content: "";
-  width: 20px;
-  height: 20px;
-  margin: 0 0 0 8px;
+  width: 14px;
+  height: 14px;
+//   margin: 0 0 0 8px;
   background: #e6e6e6;
   position: absolute;
   border-radius: 50%;
@@ -281,22 +315,23 @@ select{
 .pulse {
   background: #d6d4d4;
   border-radius: 50%;
-  height: 12px;
-  width: 12px;
+  height: 14px;
+  width: 14px;
   position: absolute;
   left: 50%;
   top: 50%;
-  margin: 20px 0px 0px -12px;
+  margin: 11px 0px 0px -12px;
   transform: rotateX(55deg);
   z-index: -2;
 }
+
 .pulse:after {
   content: "";
   border-radius: 50%;
   height: 40px;
   width: 40px;
   position: absolute;
-  margin: -8px 0 0 -18px;
+  margin: -13px 0 0 -13px;
   animation: pulsate 1s ease-out;
   animation-iteration-count: infinite;
   opacity: 0;
@@ -338,4 +373,149 @@ select{
   100% {
     transform: translateY(0) rotate(-45deg);
   }
+}
+
+
+// Button Animation
+.home-page-button{
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 15px 20px;
+    color: $fourthcolor;
+    font-weight: 300;
+    letter-spacing: 1px;
+    box-shadow: inset 0 0 0 2px white;
+    position: relative;
+    vertical-align: middle;
+    cursor: pointer;
+    margin-left: 20px;
+    input[type=submit]{
+        background: none;
+        color: $fourthcolor;
+        border: none;
+        text-transform: uppercase;
+    }
+}
+
+.home-page-button::before, .home-page-button::after {
+    box-sizing: inherit;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.line-draw::before, .line-draw::after {
+    border: 2px solid transparent;
+    width: 0;
+    height: 0;
+}
+
+.line-draw::before {
+    top: 0;
+    left: 0;
+}
+
+.line-draw::after {
+    bottom: 0;
+    right: 0;
+}
+
+.line-draw:hover::before, .line-draw:hover::after {
+    width: 100%;
+    height: 100%;
+    
+}
+
+.line-draw:hover::before {
+    border-top-color:$secondcolor;
+    border-right-color: $secondcolor;
+    transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
+}
+
+.line-draw:hover::after {
+    border-bottom-color: $secondcolor;
+    border-left-color:$secondcolor;
+    transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s;
+    color: $secondcolor;
+}
+
+
+@media (max-width: 922px){
+    .parallax.launch-form{
+        height: auto;
+        padding-bottom: 50px;
+    }
+
+    form{
+        margin: 0px;
+        margin-top: 30px;
+    }
+    .select-text{
+        line-height: 20px;
+        margin: 0px;
+    }
+    .count-up{
+        line-height: 40px;
+    }
+
+    form select{
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 25px;
+    }
+}
+
+
+// @media (max-width:730px){
+//     .launch-stats 
+// }
+
+
+@media (max-width: 922px){
+    .launch-stats 
+        p{
+            display: block;
+            width: 100%;
+            margin: 0;
+            padding: 10px;
+            line-height: 25px;
+            // font-size: 16px;
+        }
+        .dynamic-text{
+            font-size: 12px;
+            line-height: 30px;
+            margin-top: 10px;
+        }
+}
+
+
+@media (max-width: 645px){
+    .section[style]{
+        display: none !important;
+    }
+
+    .time[style]{
+        color: white !important;
+        margin: 0 !important;
+        font-size: 25px !important;
+    }
+
+    .countdown-block{
+        display: none;
+    }
+
+    .label[style]{
+        margin: 0 !important;
+    }
+}
+
+@media (max-width: 530px){
+    .tagline{
+        text-align: left;
+    }
+
+    // .us-map{
+    //     padding: 2%;
+    // }
 }
