@@ -1,32 +1,16 @@
-// Titles
+
 $maincolor: #1e2529;
-// button and border highlights
 $secondcolor:  #86a5c7;
-// highlights and hover states on text
 $thirdcolor: #eff0a8;
 $fourthcolor: #fff;
 $mainfont: 'Roboto', sans-serif;
 $headerfont: 'Arial', sans-serif;
-
-// Headers and Titles in Arial
-// All other text is Roboto
-// Buttons: rectangle, clean, no drop shadows, bordered rectangle, 18px, uppercase text, Roboto
-// Dropdowns: white dropdowns, arrows styling tbd (one arrow instead of double on Firefox), add padding, experiment with borders, upppercase text
-// Big space background image / black site
-// Quinn: Landing and Home Page
-// Angeline : Launch Details
-// Joey : MultiLaunchMap
 
 @import "components/setup";
 @import "components/homepage";
 @import "components/landingpage";
 @import "components/launchdetails";
 @import "components/multilaunchmap";
-
-// *{
-//     margin: 0;
-//     padding: 0;
-// }
 
 body{
     font-family: $mainfont;
@@ -39,11 +23,6 @@ body{
     min-width: 400px;
     margin: 0 auto;
 }
-
-// h2{
-//     font-family: $headerfont;
-//     padding: 40px 0 0 0;
-// }
 
 img{
     width: 100%;
