@@ -20,7 +20,6 @@ h2{
 
 .homepage-title{
     margin: 0;
-    // padding: 0;
 }
 
 .home-header{
@@ -63,29 +62,6 @@ h2{
     padding-bottom: 30px;
 }
 
-// .tagline:before{
-//     content: open-quote;
-//     color: $secondcolor;
-//     font-size: 70px;
-//     font-family: sans-serif;
-//     relative: absolute;
-//     top: 15px;
-//     // left: -20px;
-//     margin-right: 5%;
-//     padding: 0;
-// }
-
-// .tagline:after{
-//     content: close-quote;
-//     color: $secondcolor;
-//     font-size: 70px;  
-//     font-family: sans-serif;
-//     position: relative;
-//     top: 48px;
-//     // right: -5px;
-//     margin-left: 5%;
-// }
-
 .quotable{
     color: $secondcolor;
     text-transform: uppercase;
@@ -114,8 +90,6 @@ h2{
         font-size: 25px;
         color: $secondcolor;
         display: block;
-        // padding-top: 30px;
-
     }
 }
 
@@ -196,8 +170,8 @@ svg{
 }
 
 // Countdown Numbers
+
 .time[style]{
-    // display: block !important;
     color: black !important;
     font-size: 40px !important;
     margin-top: 20px !important;
@@ -205,13 +179,11 @@ svg{
     letter-spacing: 0.5px !important;
     font-family: $mainfont !important;
     background-color: none !important;
-    align-content: center !important;
-    // position: absolute !important;
-    // top: 50% !important;
-    // transform: translateY(-50%) !important;   
+    align-content: center !important; 
 }
 
 // Label for Numbers
+
 .label[style]{
     display: block !important;
     text-transform: uppercase;
@@ -262,6 +234,7 @@ svg{
 }
 
 // Form Styling
+
 form{
     border: none;
     margin-top: 80px;
@@ -289,11 +262,13 @@ select{
 
 
 // Multi Launch Map Panel
+
 .multi-launch-map .home-header{
     margin-bottom: 50px;
 }
 
 // US Map
+
 .us-map{
     width: 350px;
     margin: 20px auto 60px auto;
@@ -301,6 +276,7 @@ select{
 }
 
 // Pin Animation
+
 .pin {
   width: 30px;
   height: 30px;
@@ -317,7 +293,6 @@ select{
   content: "";
   width: 14px;
   height: 14px;
-//   margin: 0 0 0 8px;
   background: #e6e6e6;
   position: absolute;
   border-radius: 50%;
